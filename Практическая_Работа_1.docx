@@ -38,23 +38,42 @@ echo $( \
  | sort \
 )
 5.
+(Создать файл с помощью touch и открыть при помощи nano)
+(не забудьте прописать chmod +x <файл>)
 
 6.
+(Создать файл с помощью touch и открыть при помощи nano)
+(не забудьте прописать chmod +x <файл>)
 
 7.
+(Создать файл с помощью touch и открыть при помощи nano)
+(не забудьте прописать chmod +x <файл>)
 
 8.
+(Создать файл с помощью touch и открыть при помощи nano)
+(не забудьте прописать chmod +x <файл>)
 
+#!/bin/bash
+
+if [ "$#" -ne 2 ]; then
+ exit 1
+fi
+CATALOG="$1"
+ARCHIVE="$2"
+
+tar -cf "$ARCHIVE.tar" $(find . -maxdepth 1 -type f -name "*.$CATALOG")
+
+echo "Archive '$ARCHIVE.tar' created."
 9.
 (Создать файл с помощью touch и открыть при помощи nano)
 (А ещё создайте два файла. input.txt output.txt)
+
 (не забудьте прописать chmod +x <файл>)
 
 #!/bin/bash
 
 # если аргументов не равно 2
 if [ "$# -ne 2 ]; then
- echo "Usage $0 <FILE_1, INPUT> <FILE_2, OUTPUT>"
  exit 1
 fi
 
@@ -62,7 +81,6 @@ INPUT="$1"
 OUTPUT="$2"
 # если ввода нету
 if [ ! -f "$INPUT" ]; then
- echo "ERR: INPUT '$INPUT' doesn't exist"
  exit 1
 fi
 
@@ -84,7 +102,6 @@ echo "Task complete"
 
 # первое условие, проверка на пустоту ввода. "$# -ne 1", кол-во арг. не равно 1
 if [ "$# -ne 1 ]; then 
- echo "Usage: $0 <Dir>"
  exit 1
 fi # конец if
 DIR=$1
