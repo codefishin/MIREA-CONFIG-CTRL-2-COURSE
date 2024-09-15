@@ -45,6 +45,22 @@ echo $( \
 (Создать файл с помощью touch и открыть при помощи nano)
 (не забудьте прописать chmod +x <файл>)
 
+#!/bin/bash
+
+if [ "$# -ne 1 ]; then
+ exit 1
+fi
+file=$1
+if [ "$file" != "*.c" ] && [ "$file" != "*.py" ] && [ "$file" != "*.js" ]
+ exit 1
+fi
+ 
+if [[ $(head -n 1 $file) == \#* ]]; then
+ echo "py"
+fi
+if [[ $(head -n 1 $file) == \//* ]]; then
+ echo "c or js"
+fi
 7.
 (Создать файл с помощью touch и открыть при помощи nano)
 (не забудьте прописать chmod +x <файл>)
