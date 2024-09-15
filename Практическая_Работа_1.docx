@@ -35,3 +35,33 @@ echo $( \
  | uniq \
  | sort \
 )
+5.
+
+6.
+
+7.
+
+8.
+
+9.
+
+10.
+(Создать файл с помощью touch и открыть при помощи nano)
+
+#!/bin/bash
+
+# первое условие, проверка на пустоту ввода. "$# -ne 1", кол-во арг. не равно 1
+if [ "$# -ne 1 ]; then 
+ echo "Usage: $0 <Dir>"
+ exit 1
+fi # конец if
+DIR=$1
+# директории нету
+if [! -d "$DIR" ]; then
+ echo "ERR: Dir doesn't exist."
+ exit 1
+else
+ echo "Searching..."
+fi
+# Поиск. Через bellard.org не работает флаг -empty. Почему? Я НЕ ЗНАЮ.
+find "$DIR" -type f -name "*.txt" -empty
