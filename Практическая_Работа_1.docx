@@ -48,6 +48,19 @@ echo $( \
 7.
 (Создать файл с помощью touch и открыть при помощи nano)
 (не забудьте прописать chmod +x <файл>)
+(не работает флаг -empty на моём устройстве. проверить не могу)
+
+#!/bin/bash
+
+if [ "$#" -ne 1 ]; then
+ exit 1
+fi
+DIR=$1
+if [ ! -d "$DIR" ]; then
+ exit 1
+fi
+find "$DIR" ! -empty -type f -exec md5sum {} + | sort | uniq -w32 -d
+echo "Task complete"
 
 8.
 (Создать файл с помощью touch и открыть при помощи nano)
