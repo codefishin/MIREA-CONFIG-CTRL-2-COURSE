@@ -26,3 +26,12 @@ echo "| ${msg} |"
 sep $width
 }
 banner $1
+
+4.
+echo $( \
+ cat hello.c \
+ | tr '\n' ' ' \
+ | grep -Eo "[_a-zA-Z][_a-zA-Z0-9]*" \
+ | uniq \
+ | sort \
+)
