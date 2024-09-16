@@ -41,6 +41,20 @@ echo $( \
 (Создать файл с помощью touch и открыть при помощи nano)
 (не забудьте прописать chmod +x <файл>)
 
+#!/bin/bash
+
+if [ "$#" -ne 1 ];
+ exit 1
+fi
+COMMAND=$1
+
+if [ ! -f "$COMMAND" ]; then
+ exit 1
+fi
+sudo cp "$COMMAND" /usr/local/bin/
+sudo chmod +x /usr/local/bin/"$COMMAND"
+echo "$COMMAND copied in /usr/local/bin"
+
 6.
 (Создать файл с помощью touch и открыть при помощи nano)
 (не забудьте прописать chmod +x <файл>)
