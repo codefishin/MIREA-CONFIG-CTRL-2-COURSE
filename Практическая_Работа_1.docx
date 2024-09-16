@@ -14,7 +14,7 @@ local dash='-'
 local bounds=''
 
 for _ in $(seq 1 "$width"); do
-boundss="${bounds}${dash}"
+bounds="${bounds}${dash}"
 done
 echo "+${bounds}+"
 }
