@@ -65,7 +65,8 @@ E = E "0" | E "1" | "0" | "1"
 for i in range(10):
     print(generate_phrase(parse_bnf(BNF), 'E'))
 ```
-![image](https://github.com/user-attachments/assets/b947d1e0-fa61-49d3-befc-7cd90119f63e)
+![image](https://github.com/user-attachments/assets/a5da6b9e-9367-4955-b07c-e0da5e4374fa)
+
 
 ### Задание 4
 ```
