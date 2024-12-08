@@ -1,6 +1,6 @@
 import pytest
 import toml
-from shell_emulator.emulator import ShellEmulator
+from emulator import ShellEmulator
 
 def emulator():
     config = toml.loads("""username = "A"
