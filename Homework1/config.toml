@@ -1,0 +1,3 @@
+username = "user"
+hostname = "host"
+vfs_path = "virtual_fs.zip"
