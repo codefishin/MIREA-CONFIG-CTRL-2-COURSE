@@ -1,7 +1,7 @@
 import argparse
 import json
 import sys
-from conflang.gen import CodeGenerator
+from gen import CodeGenerator
 
 
 def main():
