@@ -35,8 +35,7 @@ class ShellEmulator:
                     continue
                 parts = command.strip().split()
                 cmd = parts[0]
-                args = parts[1:]
-
+                args = ' '.join(parts[1:])
                 if cmd == 'exit':
                     self.exit()
                 elif cmd == 'ls':
