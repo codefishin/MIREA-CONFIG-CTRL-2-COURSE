@@ -35,7 +35,7 @@ class ShellEmulator:
                     continue
                 parts = command.strip().split()
                 cmd = parts[0]
-                args = ' '.join(parts[1:]) # for some reason parts renders as list on some system. Hack
+                args = parts[1:]
                 if cmd == 'exit':
                     self.exit()
                 elif cmd == 'ls':
@@ -56,7 +56,7 @@ class ShellEmulator:
         sys.exit(0)
 
     def ls(self, args):
-        directory = self._get_directory(args)
+        directory = self._get_directory(self.current_path)
         if directory:
             for name in directory.keys():
                 print(name)
