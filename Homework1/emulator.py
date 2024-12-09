@@ -35,7 +35,7 @@ class ShellEmulator:
                     continue
                 parts = command.strip().split()
                 cmd = parts[0]
-                args = ' '.join(parts[1:])
+                args = ' '.join(parts[1:]) # for some reason parts renders as list on some system. Hack
                 if cmd == 'exit':
                     self.exit()
                 elif cmd == 'ls':
