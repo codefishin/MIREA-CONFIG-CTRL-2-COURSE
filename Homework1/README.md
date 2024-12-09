@@ -5,9 +5,10 @@ git clone <URL>
 cd <директория проекта>
 ```
 ### Шаг 2 - Установка
-Установите pytest.
+Установите pytest и toml.
 ```
 pip install pytest
+pip install toml
 ```
 ### Шаг 3 - Создание виртуальное окружение
 ### Для Windows:
