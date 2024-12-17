@@ -33,7 +33,6 @@ source venv/bin/activate
 ### Шаг 4 - Запуск программы
 Производится при помощи вызова main.py в основной папке. Убедитесь что вы установили свой/случайный репозиторий в your_repo (см. в директории your_repo)
 ```
-cd <PROGRAM_PATH>
 python main.py --graphviz_path "C:\Program Files\Graphviz\bin\dot.exe" --repo_path "<INSTALL_REPOSITORY_ON_YOUR_SYSTEM>" --output_file "<ANY_.DOT_FILE_ON_YOUR_SYSTEM_WHERE_YOU_WANT_TO_SAVE_DATA>" --tag_name "HEAD"
 ```
 Если вы установили graphviz через ``` winget install graphviz ```, то у вас автоматически установится по директории ``` C:\Program Files\Graphviz\bin\dot.exe ```. 
