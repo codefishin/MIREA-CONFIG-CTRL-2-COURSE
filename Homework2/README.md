@@ -39,6 +39,7 @@ python main.py --graphviz_path "C:\Program Files\Graphviz\bin\dot.exe" --repo_pa
 ``` --repo_path ``` требует от вас клонированый репозиторий на вашей системе (Укажите путь на папку с клонированым репозиторием).
 ``` --output_file ``` требует путь к любому файлу формата .dot (Укажите путь на файл формата .dot).
 ``` --tag_name ``` лучше оставить как "HEAD".
+
 ![image](https://github.com/user-attachments/assets/fdc7c01e-e58b-4545-969a-ab8544257013)
 
 ### Шаг 5 - Запуск тестов
