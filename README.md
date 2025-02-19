@@ -8,3 +8,5 @@ pip install coverage
 cd <проект с кодом python>
 coverage report -m
 ```
+
+# Ну и я везде пишу, оставляйте звёздочки)
